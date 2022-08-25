@@ -284,9 +284,9 @@ class ZipcodesController extends Controller
     public function show(Request $request)
     {
         try {
-            $zipcodes = Zipcodes::where('d_codigo', '=', $request->zip_code)->get();
 
             if(isset($request->zip_code)  && !empty($request->zip_code)){
+                $zipcodes = Zipcodes::where('d_codigo', '=', $request->zip_code)->get();
                 return response()->json($zipcodes);
             }else{
                 return response()->json([]);
