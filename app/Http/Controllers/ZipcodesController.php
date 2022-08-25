@@ -285,7 +285,13 @@ class ZipcodesController extends Controller
     {
         try {
             $zipcodes = Zipcodes::where('d_codigo', '=', $request->zip_code)->get();
-            return response()->json($zipcodes);
+
+            if(isset($zipcodes)){
+                return response()->json($zipcodes);
+            }else{
+                return response()->json(array());
+            }
+
         } catch (\Exception $e) {
             return response()->json(['msn'=>$e->getMessage()]);
         }
