@@ -1,0 +1,566 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API ZipCodes",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://backbonesystems.herokuapp.com"
+        }
+    ],
+    "paths": {
+        "/api/zip-codes": {
+            "get": {
+                "tags": [
+                    "ZipCodes"
+                ],
+                "summary": "Mostrar todos los ZipCodes",
+                "operationId": "f3283abcb82f5b8d074c3ec79b26e9f5",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "d_codigo": {
+                                            "type": "string",
+                                            "example": "1000"
+                                        },
+                                        "d_asenta": {
+                                            "type": "string",
+                                            "example": "San Ángel"
+                                        },
+                                        "d_tipo_asenta": {
+                                            "type": "number",
+                                            "example": "Colonia"
+                                        },
+                                        "d_mnpio": {
+                                            "type": "string",
+                                            "example": "Álvaro Obregón"
+                                        },
+                                        "d_estado": {
+                                            "type": "string",
+                                            "example": "Ciudad de México"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "ZipCodes"
+                ],
+                "summary": "Actualizar ZipCode",
+                "operationId": "14e805011782cdb2d9158be12e577de0",
+                "parameters": [
+                    {
+                        "parameter": "d_codigo_in_query",
+                        "name": "d_codigo",
+                        "in": "query",
+                        "description": "Especifique el d_codigo",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_asenta_in_query",
+                        "name": "d_asenta",
+                        "in": "query",
+                        "description": "Especifique el d_asenta",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_tipo_asenta_in_query",
+                        "name": "d_tipo_asenta",
+                        "in": "query",
+                        "description": "Especifique el d_tipo_asenta",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_mnpio_in_query",
+                        "name": "d_mnpio",
+                        "in": "query",
+                        "description": "Especifique el d_mnpio",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_estado_in_query",
+                        "name": "d_estado",
+                        "in": "query",
+                        "description": "Especifique el d_estado",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_ciudad_in_query",
+                        "name": "d_ciudad",
+                        "in": "query",
+                        "description": "Especifique el d_ciudad",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_CP_in_query",
+                        "name": "d_CP",
+                        "in": "query",
+                        "description": "Especifique el d_CP",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "c_tipo_asenta_in_query",
+                        "name": "c_tipo_asenta",
+                        "in": "query",
+                        "description": "Especifique el c_tipo_asenta",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "c_mnpio_in_query",
+                        "name": "c_mnpio",
+                        "in": "query",
+                        "description": "Especifique el c_mnpio",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "id_asenta_cpcons_in_query",
+                        "name": "id_asenta_cpcons",
+                        "in": "query",
+                        "description": "Especifique el id_asenta_cpcons",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_zona_in_query",
+                        "name": "d_zona",
+                        "in": "query",
+                        "description": "Especifique el d_zona",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "c_cve_ciudad_in_query",
+                        "name": "c_cve_ciudad",
+                        "in": "query",
+                        "description": "Especifique el c_cve_ciudad",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "d_codigo": {
+                                            "type": "string",
+                                            "example": "1000"
+                                        },
+                                        "d_asenta": {
+                                            "type": "string",
+                                            "example": "San Ángel"
+                                        },
+                                        "d_tipo_asenta": {
+                                            "type": "number",
+                                            "example": "Colonia"
+                                        },
+                                        "d_mnpio": {
+                                            "type": "string",
+                                            "example": "Álvaro Obregón"
+                                        },
+                                        "d_estado": {
+                                            "type": "string",
+                                            "example": "Ciudad de México"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "ZipCodes"
+                ],
+                "summary": "Crear ZipCode",
+                "operationId": "94398425ce151aa074e1307c97c2f163",
+                "parameters": [
+                    {
+                        "parameter": "d_codigo_in_query",
+                        "name": "d_codigo",
+                        "in": "query",
+                        "description": "Especifique el d_codigo",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_asenta_in_query",
+                        "name": "d_asenta",
+                        "in": "query",
+                        "description": "Especifique el d_asenta",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_tipo_asenta_in_query",
+                        "name": "d_tipo_asenta",
+                        "in": "query",
+                        "description": "Especifique el d_tipo_asenta",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_mnpio_in_query",
+                        "name": "d_mnpio",
+                        "in": "query",
+                        "description": "Especifique el d_mnpio",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_estado_in_query",
+                        "name": "d_estado",
+                        "in": "query",
+                        "description": "Especifique el d_estado",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_ciudad_in_query",
+                        "name": "d_ciudad",
+                        "in": "query",
+                        "description": "Especifique el d_ciudad",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_CP_in_query",
+                        "name": "d_CP",
+                        "in": "query",
+                        "description": "Especifique el d_CP",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "c_tipo_asenta_in_query",
+                        "name": "c_tipo_asenta",
+                        "in": "query",
+                        "description": "Especifique el c_tipo_asenta",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "c_mnpio_in_query",
+                        "name": "c_mnpio",
+                        "in": "query",
+                        "description": "Especifique el c_mnpio",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "id_asenta_cpcons_in_query",
+                        "name": "id_asenta_cpcons",
+                        "in": "query",
+                        "description": "Especifique el id_asenta_cpcons",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "d_zona_in_query",
+                        "name": "d_zona",
+                        "in": "query",
+                        "description": "Especifique el d_zona",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "parameter": "c_cve_ciudad_in_query",
+                        "name": "c_cve_ciudad",
+                        "in": "query",
+                        "description": "Especifique el c_cve_ciudad",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "d_codigo": {
+                                            "type": "string",
+                                            "example": "1000"
+                                        },
+                                        "d_asenta": {
+                                            "type": "string",
+                                            "example": "San Ángel"
+                                        },
+                                        "d_tipo_asenta": {
+                                            "type": "number",
+                                            "example": "Colonia"
+                                        },
+                                        "d_mnpio": {
+                                            "type": "string",
+                                            "example": "Álvaro Obregón"
+                                        },
+                                        "d_estado": {
+                                            "type": "string",
+                                            "example": "Ciudad de México"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/api/zip-codes/{zip_code}": {
+            "get": {
+                "tags": [
+                    "ZipCodes"
+                ],
+                "summary": "Mostrar un ZipCodes",
+                "operationId": "0efe6bfd1dedd5f3770ee6bdd3af8873",
+                "parameters": [
+                    {
+                        "parameter": "ZipCode_in_query",
+                        "name": "zip_code",
+                        "in": "query",
+                        "description": "Especifique el ZipCode",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "d_codigo": {
+                                            "type": "string",
+                                            "example": "1000"
+                                        },
+                                        "d_asenta": {
+                                            "type": "string",
+                                            "example": "San Ángel"
+                                        },
+                                        "d_tipo_asenta": {
+                                            "type": "number",
+                                            "example": "Colonia"
+                                        },
+                                        "d_mnpio": {
+                                            "type": "string",
+                                            "example": "Álvaro Obregón"
+                                        },
+                                        "d_estado": {
+                                            "type": "string",
+                                            "example": "Ciudad de México"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ZipCodes"
+                ],
+                "summary": "Eliminar ZipCodes",
+                "operationId": "5692e4d82d633d366ff18ec52c0b4f95",
+                "parameters": [
+                    {
+                        "parameter": "ZipCode_in_query",
+                        "name": "zip_code",
+                        "in": "query",
+                        "description": "Especifique el ZipCode",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "number",
+                                            "example": 1
+                                        },
+                                        "d_codigo": {
+                                            "type": "string",
+                                            "example": "1000"
+                                        },
+                                        "d_asenta": {
+                                            "type": "string",
+                                            "example": "San Ángel"
+                                        },
+                                        "d_tipo_asenta": {
+                                            "type": "number",
+                                            "example": "Colonia"
+                                        },
+                                        "d_mnpio": {
+                                            "type": "string",
+                                            "example": "Álvaro Obregón"
+                                        },
+                                        "d_estado": {
+                                            "type": "string",
+                                            "example": "Ciudad de México"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2021-12-11T09:25:53.000000Z"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        }
+    }
+}

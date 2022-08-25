@@ -1,0 +1,56 @@
+version: "3.7"
+services:
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php
+    volumes:
+      - ./:/var/www/
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - laravel
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: 'homestead'
+      MYSQL_USER: 'homestead'
+      MYSQL_PASSWORD: 'secret'
+      MYSQL_ROOT_PASSWORD: 'secret.root'
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - laravel
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    volumes:
+      - ./data/redis:/data
+    networks:
+      - laravel
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www/
+      - ./nginx/:/etc/nginx/conf.d/
+    networks:
+      - laravel
+
+networks:
+  laravel:
+    driver: bridge
