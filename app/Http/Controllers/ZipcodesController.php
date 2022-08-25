@@ -286,7 +286,7 @@ class ZipcodesController extends Controller
         try {
             $zipcodes = Zipcodes::where('d_codigo', '=', $request->zip_code)->get();
 
-            if(isset($request->zip_code)){
+            if(isset($request->zip_code)  && !empty($request->zip_code)){
                 return response()->json($zipcodes);
             }else{
                 return response()->json([]);
