@@ -1,23 +1,23 @@
-# Servicio Postal  Mexicano:tw-1f1ee-1f1f9:
+# Servicio Postal  Mexicano
 
 
 
 #### Introdución:
-Este es una Api desarrolla en Laravel 8 que permite hacer un CRUD de los códigos postales de México, y toda la dominación de su contenido se encuentra soportada en **Swagger**, **[Ver documentación Aquí**](http://backbonesystems.herokuapp.com/ "Aquí").
+Este es una Api desarrolla en Laravel 8 que permite hacer un CRUD de los códigos postales de México, y toda la dominación de su contenido se encuentra soportada en **Swagger**, [Ver documentación Aquí](http://backbonesystems.herokuapp.com/ "Aquí").
 
 Me decidí darle algunos pluses al desarrollo para complementarlo en documentación, rendimiento, pruebas unitarias, automatización el despliegue, estructuración de consultas:
-Docker -> automatización el despliegue
-Swagger -> documentación
-PHPUnit -> pruebas unitarias
-Redis -> rendimiento
-Eloquent ORM -> estructuración de consultas
+- Docker -> automatización el despliegue
+- Swagger -> documentación
+- PHPUnit -> pruebas unitarias
+- Redis -> rendimiento
+- Eloquent ORM -> estructuración de consultas
 
 
-**Para publicar el API se ultiliso Heroku (una plataforma como servicio de computación en la Nube) : http://backbonesystems.herokuapp.com/ **
+*Para publicar el API se ultiliso Heroku (una plataforma como servicio de computación en la Nube) : http://backbonesystems.herokuapp.com/*
 
 
 #### Obtener repositorio: 
-*git clone https://github.com/yeimosquera/backbonesystems.git*
+git clone https://github.com/yeimosquera/backbonesystems.git
 
 #### Especificaciones técnicas:
 - [Laravel 8](https://laravel.com/ "Laravel 8")
